@@ -1,0 +1,89 @@
+\documentclass{article}
+%Preamble
+\usepackage{float}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{amsmath,amssymb}
+\usepackage{graphics}
+\usepackage{graphicx}
+
+
+\title{AE 720- Numerical Methods for compressible flows \\ Assignment 2: Report \\ Exact Solution of General Riemann Problem}
+\author{Aditi Taneja}
+\date{\today}
+
+\begin{document}
+\pagenumbering{arabic}
+\maketitle
+\section*{Introduction}
+
+Exact Solution for general Riemann Problem was simulated in Python. The initial conditions were as follows:
+
+$\begin{bmatrix}
+    \rho_l \\ 
+    u_l \\
+    p_l \\
+    \end{bmatrix} = \begin{bmatrix}
+    1.0\\ 
+    0.0 \\
+    1.0 \\
+    \end{bmatrix} $
+
+$\begin{bmatrix}
+    \rho_r \\ 
+    u_r \\
+    p_r \\
+    \end{bmatrix} = \begin{bmatrix}
+    0.125\\ 
+    0\\
+    0.1 \\
+    \end{bmatrix} $
+\\Initial Discontinuity is assumed to be present at x=0. Plots for velocity, density, pressure and Temperature with x in range $[-0.5,0.5]$.
+
+
+\section*{Dependencies}
+\begin{description}
+\item[]Python
+\item[]Matplotlib
+\item[]Numpy
+\item[]Latex
+\end{description}
+
+\section*{Results}
+
+Expansion fan on the Left side ( $x < 0$ ) and Normal Shock on the right side ($x>0$) is obtained for the given conditions. 
+$p\star = 0.303132 bar
+\\u\star =  0.9273623 m/s
+\\
+rho_L\star = 0.4262903 kg/m^3 
+\\
+rho_L\star = 0.265558 kg/m^3 $
+\section*{Plots}
+\textbf{Following Plots were obtained for the given Initial Conditions. All the plots are non dimensionalized.} 
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{velocity.png}
+\label{figure:}
+\caption{Velocity vs. x}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{density.png}
+\label{figure:}
+\caption{Density vs. x}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{pressure.png}
+\label{figure:}
+\caption{pressure vs. x}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{temp.png}
+\label{figure:}
+\caption{Temperature vs. x}
+\end{figure}
+
+\end{document}
